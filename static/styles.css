@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "ColfaxAI";
+    src: url(https://cdn.openai.com/API/fonts/RobotoRegular.woff2) format("woff2"),
+        url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ColfaxAI";
+    src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+        url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+.icon {
+    width: 128px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="submit"] {
+    padding: 12px 0;
+    color: #fff;
+    background-color: #F72553;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 12px 16px;
+    border: 1px solid #F72553;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+
+input {
+    font-size: 16px;
+    line-height: 24px;
+    color: #353740;
+    font-family: "Roboto", Helvetica, sans-serif;
+}

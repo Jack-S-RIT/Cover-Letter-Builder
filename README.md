@@ -9,7 +9,7 @@ Full-stack application where a user submits the name of the company they are app
 
 3. Navigate into the project directory
 
-   $ cd openai-quickstart-python
+   $ cd COVER-LETTER-BUILDER
 
 4. Create a new virtual environment
 

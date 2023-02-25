@@ -6,37 +6,47 @@
 </head>
 
 <body>
+  <img src="{{ url_for('static', filename='cover_letter.png') }}" class="icon" />
   <h1>Cover Letter Builder</h1>
-  <h3>CSS coming soon</h3>
+  <h5>Cover Letter Builder does not save any of the the information you submit</h6>
 
-  <table>
-    <tr>
-      <td>COMPANY</td>
-      <td>POSITION</td>
-    </tr>
-    <tr>
-      <td><input type="text" name="user"></td>
-      <td><input type="text" name="email"></td>
-    </tr>
-  </table>
+  <form action="/" method="post">
+    <table>
+      <tr>
+        <td>POSITION</td>
+        <td>COMPANY</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="position" required></td>
+        <td><input type="text" name="company" required></td>
+      </tr>
+    </table>
 
-  <br>
+    <br>
 
-  <table>
-    <tr>
-      <td>RESUMÉ</td>
-      <td>JOB DESCRIPTION</td>
-    </tr>
-    <tr>
-      <td>
-        <form><textarea rows="4" cols="50"></textarea></form>
-      </td>
-      <td>
-        <form><textarea rows="4" cols="50"></textarea></form>
-      </td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <td>RESUMÉ</td>
+        <td>JOB DESCRIPTION</td>
+      </tr>
+      <tr>
+        <td>
+          <textarea rows="4" cols="50" name="resume"></textarea>
+        </td>
+        <td>
+          <textarea rows="4" cols="50" name="job_description"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="Submit">
+  </form>
 
-  <input type="submit" value="Submit">
+  {% if result %}
+  <p>
+  <div class="result">{{ result }}</div>
+  </p>
+  {% endif %}
+
+
 
 </body>
