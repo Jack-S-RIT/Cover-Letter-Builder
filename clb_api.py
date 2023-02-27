@@ -4,8 +4,6 @@ import openai
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-MAX_TOKENS = 350
-
 
 def split_paragraphs(input_text=""):
     newlines_re = re.compile(r"\n{2,}")  # two or more "\n" characters
@@ -29,9 +27,22 @@ def generate_default_cover_letter_response(position, company):
         model="text-davinci-003",
         prompt=generate_default_cover_letter_prompt(position, company),
         temperature=0.25,
-        max_tokens=MAX_TOKENS,
+        max_tokens=350,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0
     )
     return response
+
+
+def summarize_resume(resume):
+    summary = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="{}\nsummarize:\n".format(resume),
+        temperature=0,
+        max_tokens=20,
+        top_p=1.0,
+        frequency_penalty=0.0,
+        presence_penalty=0.0
+    )
+    return summary
